@@ -8,9 +8,11 @@
         Title="GPUMonEx" Height="350" Width="525">
     <Grid>
         <TabControl>
-            <TabItem Header="Summary">List user GPU properties here</TabItem>
+            <TabItem Header="Summary">
+                <TextBlock Name="txtAdapterInformation" Text="Adapter: ???" FontSize="26" />
+            </TabItem>
             <TabItem Header="Overall Usage">
-                <TextBlock Name="txtOverallUsage" Text="GPU Usage: 100%" FontSize="56"/>
+                <TextBlock Name="txtOverallUsage" Text="GPU Usage: ???" FontSize="56"/>
             </TabItem>
             <TabItem Header="Process Stats">
                 <TabPanel>

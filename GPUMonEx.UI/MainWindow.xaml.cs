@@ -150,6 +150,20 @@ namespace GPUMonEx.UI
                 return;
             }
 
+            /*
+             * Display GPU details
+             * TODO: a command line option for this
+             */
+            GPUDETAILS GpuDetails = new GPUDETAILS();
+            GPUDriver[CurrentDriver].GetGpuDetails(0, ref GpuDetails);
+
+            /* Display information about this display adapter */
+            string strDeviceID = String.Format("0x{0:X4}", GpuDetails.DeviceID);
+            string strVendorID = String.Format("0x{0:X4}", GpuDetails.VendorID);
+            txtAdapterInformation.Text = "Adapter ID: " + GpuDetails.DeviceDesc + "\n" +
+                "Device ID: " + strDeviceID + "\n" +
+                "Vendor ID: " + strVendorID + "\n";
+
             /* Initialize a timer that upates the GPU usage every 1000 milliseconds */
             System.Timers.Timer timerOverallUsage = new System.Timers.Timer();
             timerOverallUsage.Elapsed += new System.Timers.ElapsedEventHandler(this.UpdateOverallGpuUsage);
