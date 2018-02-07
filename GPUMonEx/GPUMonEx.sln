@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPUMonEx", "GPUMonEx.csproj", "{88E6F604-2410-4EC1-9EEF-702F0AE0BC65}"
 EndProject
@@ -10,6 +10,12 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPUMonEx.Driver.D3DKMT", "..\GPUMonEx.Driver.D3DKMT\GPUMonEx.Driver.D3DKMT.vcxproj", "{96924816-2E75-46E3-AE29-C582E22F6E18}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPUMonEx.Driver.NVAPI", "..\GPUMonEx.Driver.NVAPI\GPUMonEx.Driver.NVAPI.vcxproj", "{D9216F41-5FDB-47E2-BDA3-4DED671B5D2E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPUMonEx.APIHook.Direct3D", "..\GPUMonEx.APIHook.Direct3D\GPUMonEx.APIHook.Direct3D.vcxproj", "{74D8ABA8-7E0D-490F-AF60-C2DEA2A733ED}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPUMonEx.Driver.AMD", "..\GPUMonEx.Driver.AMD\GPUMonEx.Driver.AMD.vcxproj", "{D8BD174D-6F99-41A5-86E0-539D9249678C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPUMonEx.APIHook.OpenGL", "..\GPUMonEx.APIHook.OpenGL\GPUMonEx.APIHook.OpenGL.vcxproj", "{EB818434-1D3F-4A69-A31F-2631D30A513E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,8 +71,41 @@ Global
 		{D9216F41-5FDB-47E2-BDA3-4DED671B5D2E}.Release|x64.Build.0 = Release|x64
 		{D9216F41-5FDB-47E2-BDA3-4DED671B5D2E}.Release|x86.ActiveCfg = Release|Win32
 		{D9216F41-5FDB-47E2-BDA3-4DED671B5D2E}.Release|x86.Build.0 = Release|Win32
+		{74D8ABA8-7E0D-490F-AF60-C2DEA2A733ED}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{74D8ABA8-7E0D-490F-AF60-C2DEA2A733ED}.Debug|x64.ActiveCfg = Debug|x64
+		{74D8ABA8-7E0D-490F-AF60-C2DEA2A733ED}.Debug|x64.Build.0 = Debug|x64
+		{74D8ABA8-7E0D-490F-AF60-C2DEA2A733ED}.Debug|x86.ActiveCfg = Debug|Win32
+		{74D8ABA8-7E0D-490F-AF60-C2DEA2A733ED}.Debug|x86.Build.0 = Debug|Win32
+		{74D8ABA8-7E0D-490F-AF60-C2DEA2A733ED}.Release|Any CPU.ActiveCfg = Release|Win32
+		{74D8ABA8-7E0D-490F-AF60-C2DEA2A733ED}.Release|x64.ActiveCfg = Release|x64
+		{74D8ABA8-7E0D-490F-AF60-C2DEA2A733ED}.Release|x64.Build.0 = Release|x64
+		{74D8ABA8-7E0D-490F-AF60-C2DEA2A733ED}.Release|x86.ActiveCfg = Release|Win32
+		{74D8ABA8-7E0D-490F-AF60-C2DEA2A733ED}.Release|x86.Build.0 = Release|Win32
+		{D8BD174D-6F99-41A5-86E0-539D9249678C}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{D8BD174D-6F99-41A5-86E0-539D9249678C}.Debug|x64.ActiveCfg = Debug|x64
+		{D8BD174D-6F99-41A5-86E0-539D9249678C}.Debug|x64.Build.0 = Debug|x64
+		{D8BD174D-6F99-41A5-86E0-539D9249678C}.Debug|x86.ActiveCfg = Debug|Win32
+		{D8BD174D-6F99-41A5-86E0-539D9249678C}.Debug|x86.Build.0 = Debug|Win32
+		{D8BD174D-6F99-41A5-86E0-539D9249678C}.Release|Any CPU.ActiveCfg = Release|Win32
+		{D8BD174D-6F99-41A5-86E0-539D9249678C}.Release|x64.ActiveCfg = Release|x64
+		{D8BD174D-6F99-41A5-86E0-539D9249678C}.Release|x64.Build.0 = Release|x64
+		{D8BD174D-6F99-41A5-86E0-539D9249678C}.Release|x86.ActiveCfg = Release|Win32
+		{D8BD174D-6F99-41A5-86E0-539D9249678C}.Release|x86.Build.0 = Release|Win32
+		{EB818434-1D3F-4A69-A31F-2631D30A513E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{EB818434-1D3F-4A69-A31F-2631D30A513E}.Debug|x64.ActiveCfg = Debug|x64
+		{EB818434-1D3F-4A69-A31F-2631D30A513E}.Debug|x64.Build.0 = Debug|x64
+		{EB818434-1D3F-4A69-A31F-2631D30A513E}.Debug|x86.ActiveCfg = Debug|Win32
+		{EB818434-1D3F-4A69-A31F-2631D30A513E}.Debug|x86.Build.0 = Debug|Win32
+		{EB818434-1D3F-4A69-A31F-2631D30A513E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{EB818434-1D3F-4A69-A31F-2631D30A513E}.Release|x64.ActiveCfg = Release|x64
+		{EB818434-1D3F-4A69-A31F-2631D30A513E}.Release|x64.Build.0 = Release|x64
+		{EB818434-1D3F-4A69-A31F-2631D30A513E}.Release|x86.ActiveCfg = Release|Win32
+		{EB818434-1D3F-4A69-A31F-2631D30A513E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24902A06-4C3A-4118-977E-18A91DF10021}
 	EndGlobalSection
 EndGlobal

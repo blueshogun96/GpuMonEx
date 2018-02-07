@@ -10,7 +10,8 @@ namespace GPUMonEx
     {
         /* Available driver types */
         public const int NVAPI = 0;
-        public const int D3DKMT = 1;
+        public const int AMDGS = 1;
+        public const int D3DKMT = 2;
 
         static void Main(string[] args)
         {
@@ -25,8 +26,8 @@ namespace GPUMonEx
              * Let's start off with a little driver enumeration. Each driver has to go through a series
              * of tests to determine whether we can actually use it's API or not.
              */
-            GPUDriverBase[] Drivers = { new GPUDriverNVAPI(), new GPUDriverD3DKMT() };
-            bool[] ValidDrivers = { false, false };
+            GPUDriverBase[] Drivers = { new GPUDriverNVAPI(), new GPUDriverAMDGS(), new GPUDriverD3DKMT() };
+            bool[] ValidDrivers = { false, false, false };
 
             /*
              * Attempt to initialize the NVAPI driver first.  Without a valid NVIDIA GPU driver installed,
@@ -45,6 +46,27 @@ namespace GPUMonEx
                 Console.WriteLine(e.Message+"\n");
             }
             catch( System.EntryPointNotFoundException e )
+            {
+                Console.WriteLine(e.Message + "\n");
+            }
+
+            /*
+             * Attempt to initialize the AMDGS driver first.  Without a valid AMD GPU driver installed,
+             * this should fail in one way or another.
+             * 
+             * Known Issues:
+             * - This needs to be implemented/tested on AMD hardware (I don't have an AMD card).
+             */
+            try
+            {
+                if (Drivers[AMDGS].Initialize() != 0)
+                    ValidDrivers[AMDGS] = true;
+            }
+            catch (System.DllNotFoundException e)
+            {
+                Console.WriteLine(e.Message + "\n");
+            }
+            catch (System.EntryPointNotFoundException e)
             {
                 Console.WriteLine(e.Message + "\n");
             }
