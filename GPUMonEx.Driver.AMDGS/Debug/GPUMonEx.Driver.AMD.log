@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  GPUMonEx.Driver.AMD.cpp
+  dllmain.cpp
+  Generating Code...
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1198,5): warning MSB8012: TargetPath(C:\Shogun3D\Tools\GpuMonEx\GPUMonEx\Debug\GPUMonEx.Driver.AMD.dll) does not match the Linker's OutputFile property value (C:\Shogun3D\Tools\GpuMonEx\bin\x86\GPUMonEx.Driver.AMD.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     Creating library C:\Shogun3D\Tools\GpuMonEx\GPUMonEx\Debug\GPUMonEx.Driver.AMD.lib and object C:\Shogun3D\Tools\GpuMonEx\GPUMonEx\Debug\GPUMonEx.Driver.AMD.exp
+  GPUMonEx.Driver.AMD.vcxproj -> C:\Shogun3D\Tools\GpuMonEx\GPUMonEx\Debug\GPUMonEx.Driver.AMD.dll

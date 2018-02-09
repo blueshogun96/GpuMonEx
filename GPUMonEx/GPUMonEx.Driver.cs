@@ -30,7 +30,7 @@ namespace GPUMonEx
 	 * TODO: Get ahold of Intel's SDK as well as implement AMD's equivalent for their hardware.
 	 * 
 	 * NVAPI - NVIDIA Driver Specific functionality 
-     * AMD - Radeon Driver specific functionality
+     * AMDGS - Radeon Driver specific functionality
 	 * D3DKMT - Direct3D internal driver functions.  Should work for all GPUs, but currently needed for Intel.
 	 */
     static class DrvD3DKMT
